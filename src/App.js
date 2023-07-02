@@ -1,10 +1,11 @@
 
 import { useState } from 'react';
 import './App.css';
-import Homepage from './components/homepage/homepage'
-import Login from './components/login/login'
-import Register from './components/register/register'
+import Homepage from './screen/homepage/homepage'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import SignIn from './components/login/signin'
+import SignUp from './components/register/signup';
+
 
 function App() {
 
@@ -17,10 +18,10 @@ function App() {
       <Router>
         <Routes>
           <Route exact path='/' element={
-            user && user._id ? < Homepage setLoginUser={setLoginUser} /> : <Login setLoginUser={setLoginUser} />
+            user && user._id ? < Homepage setLoginUser={setLoginUser} /> : <SignIn setLoginUser={setLoginUser} />
             } />
-          <Route path='/login' element={<Login setLoginUser={setLoginUser} />} />
-          <Route path='/register' element={<Register />} />
+          <Route path='/signin' element={<SignIn setLoginUser={setLoginUser} />} />
+          <Route path='/signup' element={<SignUp />} />
         </Routes>
       </Router>
     </div>
