@@ -28,15 +28,16 @@ export default function AccountMenu({ setLoginUser }) {
 
     navigate('/signin')
   }
+  
   const handleClose = () => {
     setAnchorEl(null);
   };
   return (
-    <React.Fragment>
-      <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center', bgcolor: 'success.main', mb: 2, minHeight: 80 }}>
+    <React.Fragment >
+      <Box  sx={{ position: 'sticky', top: 0, zIndex: 100, display: 'flex', alignItems: 'center', textAlign: 'center', bgcolor: 'success.main', mb: 2, minHeight: 80,}}>
         <Typography sx={{ minWidth: 100, fontSize: 30 }}>Yummy Food</Typography>
-        <Typography sx={{ minWidth: 100, }}>Home </Typography>
-        <Typography sx={{ minWidth: 100,}}>About </Typography>
+        <Typography sx={{ minWidth: 100, fontWeight: 'bold',}} style={{cursor:"pointer"}} onClick={()=>navigate("/")}>Home </Typography>
+        <Typography sx={{ minWidth: 100,fontWeight: 'bold',}} style={{cursor:"pointer"}} onClick={()=>navigate("/about")}>About </Typography>
         <Typography sx={{
           minWidth:100,
           position: 'absolute',
@@ -44,6 +45,8 @@ export default function AccountMenu({ setLoginUser }) {
           top: 0,
           mr: 10,
           mt: 3,
+          cursor:"pointer",
+          fontWeight: 'bold',
         }}>
           My Orders</Typography>
         <Tooltip title="Account settings">
