@@ -1,4 +1,9 @@
 .App {
-    
+
     font-family: 'Merriweather', serif;
+}
+
+* {
+    font-family: 'Merriweather', serif;
+    font-family: 'Sorts Mill Goudy', serif;
 }

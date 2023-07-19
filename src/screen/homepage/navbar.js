@@ -24,9 +24,9 @@ export default function AccountMenu({ setLoginUser }) {
 
   };
 
-  const handleLogout = () => {
+  const handleLogout = (e) => {
 
-    navigate('/signin')
+    navigate('/signin.js')
   }
   
   const handleClose = () => {
@@ -125,7 +125,7 @@ export default function AccountMenu({ setLoginUser }) {
         </MenuItem>
         <MenuItem onClick={handleClose}>
           <ListItemIcon >
-            <Logout fontSize="small" onClick={handleLogout} />
+            <Logout fontSize="small" onClick={()=>handleLogout} />
           </ListItemIcon >
           Logout
         </MenuItem>
